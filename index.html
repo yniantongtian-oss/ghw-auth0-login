@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth0 Login</title>
+    <meta
+      name="description"
+      content="Vanilla JavaScript single-page app with an Auth0 Universal Login flow."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2363b3ed'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loading" class="loading-state">
+      <p class="loading-text">Loading...</p>
+    </div>
+
+    <div id="error" class="error-state" style="display: none">
+      <h1 class="error-title">Oops!</h1>
+      <p class="error-message">Something went wrong</p>
+      <p id="error-details" class="error-sub-message"></p>
+    </div>
+
+    <main id="app" class="app-container" style="display: none">
+      <div class="main-card-wrapper">
+        <img
+          class="auth0-logo"
+          src="https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-lockup-en-ondark.png"
+          alt="Auth0"
+        />
+        <h1 class="main-title">Welcome</h1>
+        <p class="main-subtitle">Vanilla JavaScript single-page app</p>
+
+        <section id="logged-out" class="action-card">
+          <p class="action-text">Get started by signing in to your account</p>
+          <button id="login-btn" class="button login" type="button">Log in</button>
+        </section>
+
+        <section id="logged-in" class="logged-in-section" style="display: none">
+          <p class="logged-in-message">Successfully authenticated</p>
+          <h2 class="profile-section-title">Your profile</h2>
+          <div id="profile" class="profile-card"></div>
+          <h2 class="claims-title">ID token claims</h2>
+          <pre id="claims" class="claims-block"></pre>
+          <button id="logout-btn" class="button logout" type="button">Log out</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.30/auth0-spa-js.production.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
