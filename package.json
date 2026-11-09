@@ -1,0 +1,9 @@
+{
+  "name": "ghw-auth0-login",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MLH Global Hack Week: first Auth0 login flow for a vanilla JavaScript SPA",
+  "scripts": {
+    "start": "npx --yes serve -l 3000"
+  }
+}
